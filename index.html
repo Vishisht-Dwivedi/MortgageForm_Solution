@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+  <link rel="stylesheet" href="./styles.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="outer">
+    <section class="inner">
+      <div class="input">
+        <header>
+          <h1>Mortgage Calculator</h1>
+          <span id="clr">Clear All</span>
+        </header>
+
+        <form>
+          <div class="mAmt">
+            <label for="principleAmt">Mortgage Amount</label>
+            <div class="inputContainer boxInput">
+              <span class="addon">&#163;</span>
+              <input type="text" id="principleAmt" inputmode="numeric">
+            </div>
+            <div class="errText">This field is required</div>
+          </div>
+
+
+          <div class="mnr-group">
+            <div class="mnr">
+              <label for="time">Mortgage Term</label>
+              <div class="inputContainer boxInput">
+                <input type="number" id="time">
+                <span class="addon">years</span>
+              </div>
+              <div class="errText">This field is required</div>
+            </div>
+            <div class="mnr">
+              <label for="rate">Interest Rate</label>
+              <div class="inputContainer boxInput">
+                <input type="number" id="rate">
+                <span class="addon">%</span>
+              </div>
+              <div class="errText">This field is required</div>
+            </div>
+          </div>
+
+
+          <p id="mtype">Mortgage Type</p>
+          <div class="mtype">
+            <label for="repay" class="inputContainer labelInput">
+              <input type="radio" name="type" id="repay">
+              <span>Repayment</span>
+            </label>
+            <label for="interestOnly" class="inputContainer labelInput" style="margin-top: 0">
+              <input type="radio" name="type" id="interestOnly">
+              <span>Interest Only</span>
+            </label>
+          </div>
+          <div class="errText">This field is required</div>
+
+          <button type='submit' class="submit"><img src="./assets/images/icon-calculator.svg">Calculate
+            Repayments</button>
+        </form>
+      </div>
+      <div class="outputContainer">
+
+
+        <div class="emptyOutput">
+          <img src="./assets/images/illustration-empty.svg" alt="">
+          <h1>Results shown here</h1>
+          <p>Complete the form and click “calculate repayments” to see what
+            your monthly repayments would be.</p>
+
+        </div>
+
+        <div class="completedOutput">
+          <h1>Your results</h1>
+          <p>
+            Your results are shown below based on the information you provided.
+            To adjust the results, edit the form and click “calculate repayments” again.
+          </p>
+          <div class="outputHero">
+            <header>
+              <p>Your monthly repayments</p>
+              <h1>&#163; <span id="monthly">Number</span></h1>
+            </header>
+            <footer>
+              <p>Total you'll repay over the term</p>
+              <h1>&#163; <span id="total">Number</span></h1>
+            </footer>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+  </main>
+
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="./scripts.js"></script>
+</body>
+
+</html>
