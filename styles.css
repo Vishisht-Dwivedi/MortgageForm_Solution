@@ -124,6 +124,11 @@ input[type='number']:focus+.addon {
     flex-direction: column;
 }
 
+.mortType {
+    margin-top: 0 !important;
+    margin-bottom: 0.5rem !important;
+}
+
 
 .mtype label {
     display: flex;
